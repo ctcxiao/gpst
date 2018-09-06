@@ -13,4 +13,9 @@ describe('generateRandomNumber()', () => {
         let expectText = main.generateRandomNumber();
         expect(1).toBe(expectText.length);
     });
+
+    it('generate 4 random number', ()=>{
+        let expectText = main.generate4RandomNumber();
+        expect(4).toBe(expectText.length);
+    });
 });
