@@ -1,11 +1,12 @@
 const main = require('../main/main');
 
 describe('main()', () => {
-    /*it('guess no correct number', ()=>{
-        var inputs = "1234";
-        let expectText = main.main();
+    it('guess no correct number', ()=>{
+        let input = "1234";
+        let random = "4321";
+        let expectText = main.calculateGuess(input, random);
         expect("0A4B").toBe(expectText);
-    });*/
+    });
 });
 
 describe('generateRandomNumber()', () => {

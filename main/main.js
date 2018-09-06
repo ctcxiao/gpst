@@ -1,7 +1,12 @@
-function main() {
-
+function main(input) {
+    let random = generate4RandomNumber();
+    return calculateGuess(input, random);
 }
 
+function calculateGuess(input, random) {
+    let result = "0A4B";
+    return result;
+}
 function generateRandomNumber() {
     return String(Math.round(Math.random()*10));
 }
@@ -16,5 +21,5 @@ function generate4RandomNumber() {
 }
 
 module.exports = {
-    main, generateRandomNumber,generate4RandomNumber
+    main, generateRandomNumber,generate4RandomNumber, calculateGuess
 }

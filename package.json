@@ -19,5 +19,8 @@
   "homepage": "https://school.thoughtworks.cn",
   "devDependencies": {
     "jasmine": "^2.6.0"
+  },
+  "dependencies": {
+    "mockjs": "^1.0.1-beta3"
   }
 }
