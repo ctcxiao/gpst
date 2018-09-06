@@ -14,6 +14,13 @@ describe('main()', () => {
         let expectText = main.calculateGuess(input, random);
         expect("4A0B").toBe(expectText);
     });
+
+    it('guess no correct number and position is not correct', ()=>{
+        let input = "1234";
+        let random = "5678";
+        let expectText = main.calculateGuess(input, random);
+        expect("0A0B").toBe(expectText);
+    });
 });
 
 describe('generateRandomNumber()', () => {
