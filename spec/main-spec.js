@@ -1,11 +1,18 @@
 const main = require('../main/main');
 
 describe('main()', () => {
-    it('guess no correct number', ()=>{
+    it('guess correct number but position is not correct', ()=>{
         let input = "1234";
         let random = "4321";
         let expectText = main.calculateGuess(input, random);
         expect("0A4B").toBe(expectText);
+    });
+
+    it('guess correct number and position is correct', ()=>{
+        let input = "1234";
+        let random = "1234";
+        let expectText = main.calculateGuess(input, random);
+        expect("4A0B").toBe(expectText);
     });
 });
 
