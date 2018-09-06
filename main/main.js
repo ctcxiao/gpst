@@ -3,13 +3,11 @@ function main(input) {
     return calculateGuess(input, random);
 }
 
-function calculateGuess(input, random) {
-    let inputArray = Array.from(input);
-    let randomArray = Array.from(random);
-
-    let result = "";
+function findCountAB(inputArray, randomArray) {
     let countA = 0;
     let countB = 0;
+
+    let result = "";
     inputArray.forEach((value, index) => {
         randomArray.forEach((value2, index2) => {
             if (value2 === value && index2 === index) {
@@ -20,7 +18,24 @@ function calculateGuess(input, random) {
         })
     });
     result += `${countA}A${countB}B`;
+
     return result;
+}
+
+function calculateGuess(input, random) {
+    if(checkInputIsError(input)){
+        return "error";
+    }
+    return findCountAB(Array.from(input), Array.from(random));
+}
+
+function checkInputIsError(input) {
+    return (input.length !== 4 || inputHasChar(input));
+}
+
+function inputHasChar(input) {
+    let regex = /^\+?[1-9][0-9]*$/;
+    return !regex.test(input);
 }
 
 function generateRandomNumber() {
