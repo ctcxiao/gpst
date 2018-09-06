@@ -1,6 +1,11 @@
-// Write your cade below:
-function main() {};
+function main() {
+
+}
+
+function generateRandomNumber() {
+    return String(Math.round(Math.random()));
+}
 
 module.exports = {
-    main
+    main, generateRandomNumber,
 }
